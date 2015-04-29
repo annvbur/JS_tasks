@@ -2,23 +2,38 @@
 <html>
  <head>
     <meta charset="UTF-8">
-    <title>Strings</title>
+    <title>Table</title>
     <link rel="stylesheet" href="Strings_CSS.css">
     <script type="text/javascript" src = "Strings_script.js"></script>
   </head>
 
  <body>
+
  
- <div>
+ <div >
+ <table class="table" align="center" width="300" id="table"  cellspacing="0" cellpadding="0">
+ 	<tbody align="center">
+ 		<tr height="100" border="1" align="center" >
+			<!-- <td align="center" ></td>
+			<td align="center" ></td> -->
+		</tr>
+	</tbody>
+ </table>
+ </div> 
+
+ <div class="inp">
+
 Name:
 <input type="text" id="input1"  name="name" size = "50" >
 Surname:
 <input type="text" id="input2" name="surname" size = "50" >
 
 
-<input type="button" value="Add" onclick="creatingDictionary()">
+<input type="button" value="Add" onclick="createAndEditTable();">
 
 </div> 
+
+
 
 
   </body>

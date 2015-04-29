@@ -2,11 +2,32 @@
  background-color: #FFFFF0;
 }
 
-body > div{
-margin-top: 20%;
+div.inp{
+	text-align: center;
+
 
 }
 
-div{
+
+/*.table{
+	text-align: top;
+	margin-top: 20%;
+	vertical-align:top;
+	table-layout: fixed;
+	width: 50%;
+	border-collapse: collapse;
+	/*margin-top: 5%;
+	border: 2;
+	width: 200;
+	height: 200;
+	clear:both;*/
+
+}*/
+
+/*.inp{
+	
   text-align: center;
-}
+}*/
+
+
+
