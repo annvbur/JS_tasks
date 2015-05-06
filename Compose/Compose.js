@@ -33,25 +33,54 @@ function forthWord(){
 console.log("compose function start");
 
 
-function compose(fun1, fun2, fun3, fun4){
+function compose(){
 	var sourceArgs = arguments;
-	console.log(sourceArgs);
-	if (typeof fun1, fun2, fun3, fun4 === 'function') {
-    return function () {
-      if (arguments.length > 0) {
-        return arguments.apply(this);
-      } else {
-        throw new Error('Something went wrong');
-      }
-    }
-  }
-  return null;
-
+	//if (typeof sourceArgs === 'function', 'function', 'function', 'function') {
+		if (typeof sourceArgs[0] === 'function'){
+			var resultFn =
+    	function () {
+      		//for (i = 0; i < sourceArgs.length; i++) {  
+      			if(arguments.length === sourceArgs.length){
+        			return sourceArgs.apply(this);
+      		} else {
+        		throw new Error('Something went wrong');
+      				}
+    			}
+  			//}
+  		return resultFn;
+	}
+	return null;
 }
-compose(firstWord, secondWord, thirtWord, forthWord);
-compose(firstWord(), secondWord(), thirtWord(), forthWord());
-//compose();
 
+
+var composeThem = compose(firstWord, secondWord, thirtWord, forthWord);
+
+console.log(composeThem);
+
+
+
+
+// function compose(){
+// 	var sourceArgs = arguments;
+// 	//if (typeof sourceArgs === 'function', 'function', 'function', 'function') {
+// 		if (typeof sourceArgs[0] === 'function'){
+//     	return function () {
+//       		for (i = 0; i < sourceArgs.length; i++) {  //- счетчик для каждого sourceArgs
+//       			if(sourceArgs.length > 0){
+//         return sourceArgs.apply(this);
+//       } else {
+//         throw new Error('Something went wrong');
+//       }
+//     }
+//   }
+//   return null;
+// }
+// }
+
+
+// var composeThem = compose(firstWord, secondWord, thirtWord, forthWord);
+
+// console.log(composeThem);
 
 
 
