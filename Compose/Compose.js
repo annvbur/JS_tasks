@@ -35,27 +35,20 @@ console.log("compose function start");
 
 function compose(){
 	var sourceArgs = arguments;
-	//if (typeof sourceArgs === 'function', 'function', 'function', 'function') {
-		if (typeof sourceArgs[0] === 'function'){
-			var resultFn =
-    	function () {
-      		//for (i = 0; i < sourceArgs.length; i++) {  
-      			if(arguments.length === sourceArgs.length){
-        			return sourceArgs.apply(this);
-      		} else {
-        		throw new Error('Something went wrong');
-      				}
-    			}
-  			//}
-  		return resultFn;
+return function(){
+for (var i =0; i<sourceArgs.length; i++){
+	if (typeof sourceArgs[i]==='function'){
+		sourceArgs[i].apply(this, arguments);
 	}
-	return null;
+}
+};	
 }
 
 
 var composeThem = compose(firstWord, secondWord, thirtWord, forthWord);
+composeThem();
 
-console.log(composeThem);
+//console.log(composeThem);
 
 
 
