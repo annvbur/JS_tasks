@@ -4,25 +4,53 @@ var sourceFn = function () {
 
 
 
-
-
-
-
-
-
-function once(){
-	var sourceArgs = arguments;
+function once(sourceFnOnce){
+	
 	var wasCalled = false; //flag
 
 	return function (){
 			if(!wasCalled){
-			if (typeof sourceArgs[0] === 'function'){
-				sourceArgs[0].apply(this, arguments);
+			if (typeof sourceFnOnce === 'function'){
+				sourceFnOnce.apply(this, arguments);
 			}
 		wasCalled = true;
 		}
 	}
 }
+
+
+var sourceFnOnce = once(sourceFn);
+
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+sourceFnOnce();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -54,7 +82,7 @@ function once(){
 
 
 
-// правильно
+// правильно. callee не то
 // function once(){
 // 	var sourceArgs = arguments;
 
@@ -71,20 +99,7 @@ function once(){
 
 
 
- var sourceFnOnce = once(sourceFn);
-
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
-sourceFnOnce();
+ 
 
 
 
