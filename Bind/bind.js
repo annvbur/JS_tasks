@@ -10,8 +10,8 @@ function bind(boundFn, contextObj){
 	return function (){
 		
 		if (typeof boundFn === 'function'){
-			var that = contextObj;
-			boundFn.apply(that);
+			//var that = contextObj;
+			boundFn.apply(contextObj);
 		}	
 	}
 }
