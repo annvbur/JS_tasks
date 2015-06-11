@@ -14,8 +14,8 @@ function drag(elementToDrag, event){
     document.addEventListener("mousemove", moveHandler, true);
     document.addEventListener("mouseup", upHandler, true);
 
-    event.stopPropagation(); // откл. дальнейшее распространение события
-    event.preventDefault(); // откл. действий по умолчанию
+    //event.stopPropagation(); // откл. дальнейшее распространение события
+    //event.preventDefault(); // откл. действий по умолчанию
 
 
     function moveHandler(event) 
