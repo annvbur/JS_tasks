@@ -1,0 +1,5 @@
+In this task I created a simple object 'accumulator'. It stores a current value and provides means to increase the value
+by adding some number or just incrementing the current value.
+
+Then I test my accumulator object - I add some value, it works. Then I want to increment the value after 2 seconds, so I add a timer.
+But here something goes wrong. Please find and fix.

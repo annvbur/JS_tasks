@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript">
+    (function () {
+
+      var accumulator = {
+        currentValue: 0,
+        logValue: function () {
+          console.log('Current accumulated value changed to: ' + this.currentValue);
+        },
+        add: function (value) {
+          this.currentValue += value;
+          this.logValue();
+        },
+        increment: function () {
+          this.add(1);
+          this.logValue();
+        }
+      };
+
+      // I want to add some value:
+      accumulator.add(10);
+
+      // and in 2 seconds I want to increment accumulator's value:
+      setTimeout(function() { accumulator.increment() } , 2000);
+
+      
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
