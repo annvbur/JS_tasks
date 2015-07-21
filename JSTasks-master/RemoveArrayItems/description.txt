@@ -1,0 +1,5 @@
+The task is to remove all items which are not numbers from the source array.
+Source array: [1, 2, "3", 4, '5' , '1 + 1', 1, 4, {value: 10}, 10, [5], 12, '13', '2 + 2']
+
+The task was easily implemented, but unfortunately with a bug ((.
+Please, find why some items are not removed and make it work correctly!

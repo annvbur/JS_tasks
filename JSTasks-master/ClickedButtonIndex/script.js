@@ -12,7 +12,7 @@ function inspect() {
 
   for (i = 0; i < childDivs.length; i++) {
     childDivs[i].addEventListener('click', function () {
-      console.log('Clicked the child elem #' + this.innerText);
+      console.log('Clicked the child elem #' + Array.prototype.indexOf.call(childDivs, this))
     });
   }
 }

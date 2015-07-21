@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript">
+    (function () {
+var sourceArray = [1, 2, "3", 4, '5' , '1 + 1', 1, 4, {value: 10}, 10, [5], 12, '13', '2 + 2'];
+var i;
+var length = sourceArray.length - 1;
+for(i = length; i >= 0; i--) {
+if(typeof sourceArray[i] !== 'number') {
+sourceArray.splice(i, 1);
+}
+}
+console.log(sourceArray);
+})();
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
